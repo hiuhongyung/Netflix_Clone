@@ -1,0 +1,31 @@
+.row {
+    margin-left: 10px;
+    color:white;
+   
+}
+
+
+.row_posters {
+    /*add flex box to the container */
+    display: flex; /*style it from vertical to horizontal (a row)  */
+    overflow-y:hidden;  /*a scroll bar appears at the bottom  */
+    overflow-x: scroll; /*then the hover effect will gone   */
+    padding: 20px;
+}
+.row_posters::-webkit-scrollbar{
+    display: none;
+}
+.row_poster {
+    object-fit: contain;
+    width: 100% ;
+    max-height: 150px;
+    transition: transform 450ms;   /*for the hover effect  */
+    margin-right: 10px;
+}
+.row_posterLarge{
+    max-height: 230px;
+}
+.row_poster:hover {
+  transform: scale(1.5);
+  opacity: 0.5;
+}
